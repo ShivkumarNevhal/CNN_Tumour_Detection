@@ -4,6 +4,8 @@ import numpy as np
 from PIL import Image
 import time
 import base64
+import gdown
+import os
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -79,7 +81,14 @@ st.markdown('<p class="subtitle">Upload an MRI image and get instant AI predicti
 # ---------------- LOAD MODEL ----------------
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("Tumour_Detection.h5")
+    file_id = "1H-Aal7xMKoDw7r_Qx12NDVc28xWpGhen"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    output = "Tumour_Detection.h5"
+
+    if not os.path.exists(output):
+        gdown.download(url, output, quiet=False)
+
+    model = tf.keras.models.load_model(output)
     return model
 
 model = load_model()
