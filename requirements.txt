@@ -7,3 +7,4 @@ matplotlib
 tensorboard==2.15.2
 streamlit==1.31.1
 protobuf<5
+gdown
