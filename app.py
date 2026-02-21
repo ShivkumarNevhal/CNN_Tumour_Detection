@@ -104,7 +104,7 @@ if uploaded_file is not None:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(image, caption="Uploaded MRI", use_container_width=True)
+        st.image(image, caption="Uploaded MRI", use_column_width=True)
 
     with col2:
         st.write("### 🔍 AI Analysis in Progress")
@@ -139,3 +139,4 @@ if uploaded_file is not None:
 
 st.write("---")
 st.caption("Deep Learning Medical Imaging System | Developed by Shivkumar Nevhal")
+
