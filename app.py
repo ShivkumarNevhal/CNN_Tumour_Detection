@@ -81,7 +81,7 @@ st.markdown('<p class="subtitle">Upload an MRI image and get instant AI predicti
 # ---------------- LOAD MODEL ----------------
 @st.cache_resource
 def load_model():
-    file_id = "1H-Aal7xMKoDw7r_Qx12NDVc28xWpGhen"
+    file_id = "1TcaWHXwhP7XCQVRdFn2MJohkSS-cEdkV"
     url = f"https://drive.google.com/uc?id={file_id}"
     output = "Tumour_Detection.h5"
 
@@ -139,4 +139,5 @@ if uploaded_file is not None:
 
 st.write("---")
 st.caption("Deep Learning Medical Imaging System | Developed by Shivkumar Nevhal")
+
 
